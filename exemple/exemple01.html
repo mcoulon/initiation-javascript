@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function defineLinks() {
+            var links = document.getElementsByTagName("a");
+            for (var i = 0; i < links.length; i++) {
+                links.item(i).onclick = function() {
+                    return confirm("êtes vous sur?");
+                };
+            }
+        }
+    </script>
+    <script>
+        const nom = "Max"
+        const prenom = "C"
+    </script>
+</head>
+
+
+<body onload="defineLinks()">
+    <p>visitez le site du
+        <a href="http://lesoir.be" onclick="return confirm('Vous êtes sur?')">Soir.be</a>
+    </p>
+
+    <a href="javascript:'<p>Hello ' + nom + ' ' + prenom + ' !</p>' ">Test</a>
+
+
+</body>
+
+</html>
