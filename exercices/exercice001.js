@@ -1,11 +1,11 @@
-let nom = prompt("nom")
-let prenom = prompt("prenom")
-let age = prompt("age")
-let adresse = prompt("adresse")
-let cp = prompt("cp")
-let ville = prompt("ville")
-let taille = prompt("taille")
-let poids = prompt("poids")
+let nom = prompt("Quel est votre nom?")
+let prenom = prompt("Quel est votre prénom?")
+let age = prompt("Quel est votre âge?")
+let adresse = prompt("Quel est votre adresse?")
+let cp = prompt("Quel est votre code postal?")
+let ville = prompt("Dans quelle ville habitez vous?")
+let taille = prompt("Quel est votre taille?")
+let poids = prompt("Quel est votre poids?")
 let resultat = Math.round(poids / taille ** 2);
 
 function imc() {
