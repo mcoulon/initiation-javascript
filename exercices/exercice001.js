@@ -19,7 +19,7 @@ function imc() {
     let mesures = div.appendChild(document.createElement("p"));
     mesures.appendChild(document.createTextNode(`Age :${age} -  Taille :${taille} + Poids :${poids}`));
     let tgros = div.appendChild(document.createElement("p"));
-    tgros.appendChild(document.createTextNode(`${resultat}`));
+    tgros.appendChild(document.createTextNode(`Indice de masse corporelle : ${resultat}`));
     return
 }
 
