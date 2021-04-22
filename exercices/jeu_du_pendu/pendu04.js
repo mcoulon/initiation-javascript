@@ -18,6 +18,8 @@ function game() {
     let huit = document.querySelector('.quatrieme');
     let neuf = document.querySelector('.cinquieme');
     let dix = document.querySelector('.sixieme');
+    let img = document.createElement('img');
+    img.src = "./img/pendu010.png";
 
     cinq.addEventListener('click', () => {
         choix = mots_5
@@ -53,7 +55,6 @@ function game() {
             tableauLettre[i] = "_";
         }
         refresh();
-        choisirLettre();
     }
 
 
@@ -61,7 +62,6 @@ function game() {
         do {
             lettreJoueur = prompt(`le mot à trouver est ${tableauLettre.join(" ")}\nIl vous reste ${score} essais, \nChoisissez une lettre`);
         } while (lettreJoueur.length > 1 || lettreJoueur == "" || !isNaN(lettreJoueur));
-        refresh();
         vérifierLettre(lettreJoueur);
     }
 
@@ -71,29 +71,32 @@ function game() {
             if (mot[i] == x) {
                 trouvé = true;
                 tableauLettre[i] = x;
-                refresh();
-
             }
         }
 
         if (trouvé == false) {
             score--;
-            refresh();
         }
         checkTableau();
+        refresh();
     }
 
     function refresh() {
         let container = document.querySelector('.container');
         while (container.firstChild) container.removeChild(container.firstChild);
-        container.innerHTML = `<p>${tableauLettre.join(" ")}</p>`;
+        container.innerHTML = `<p>${tableauLettre.join(" ")}</p>
+        <p> ${img}`;
+        setTimeout(choisirLettre, 200);
     }
 
     function checkTableau() {
         trouvé = false;
         if (score == 0) {
             alert(`Vous avez perdu, le mot à trouver était ${mot}`);
-            confirm(`Voulez-vous rejouer?`) ? game() : alert(`Au Revoir`);
+            let container = document.querySelector('.container');
+            while (container.firstChild) container.removeChild(container.firstChild);
+            container.innerHTML = `<p>${tableauLettre.join(" ")}</p>`;
+            game();
         } else {
             reponse = 0;
             for (i = 0; i < tableauLettre.length; i++) {
@@ -104,9 +107,10 @@ function game() {
 
             if (reponse == mot.length) {
                 alert(`Bravo, vous avez gagné, le mot à trouver était bien ${mot}`);
-                confirm(`Voulez-vous rejouer?`) ? game() : alert(`Au Revoir`);
-            } else {
-                choisirLettre();
+                let container = document.querySelector('.container');
+                while (container.firstChild) container.removeChild(container.firstChild);
+                container.innerHTML = `<p>${tableauLettre.join(" ")}</p>`;
+                game();
             }
         }
     }
