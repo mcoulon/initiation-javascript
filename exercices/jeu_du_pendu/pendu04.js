@@ -18,8 +18,7 @@ function game() {
     let huit = document.querySelector('.quatrieme');
     let neuf = document.querySelector('.cinquieme');
     let dix = document.querySelector('.sixieme');
-    let img = document.createElement('img');
-    img.src = "./img/pendu010.png";
+    let img
 
     cinq.addEventListener('click', () => {
         choix = mots_5
@@ -81,11 +80,20 @@ function game() {
         refresh();
     }
 
+    function image() {
+        switch (score) {
+            case 1:
+                score = 10
+                img = '"./img/pendu010.png"'
+        }
+    }
+
     function refresh() {
+        image();
         let container = document.querySelector('.container');
         while (container.firstChild) container.removeChild(container.firstChild);
         container.innerHTML = `<p>${tableauLettre.join(" ")}</p>
-        <p> ${img}`;
+        <p> <img src="${img}" alt='url image'><p>`;
         setTimeout(choisirLettre, 200);
     }
 
