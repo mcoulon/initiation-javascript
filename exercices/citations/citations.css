@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#section {
+    background: linear-gradient(45deg, blue, green)
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#citations {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 50%;
+    width: 50%;
+    background-color: beige;
+    padding: 2rem;
+}
+
+#texte {
+    font-size: 2.5rem;
+    text-align: center;
+    width: 85%;
+}
+
+#new {
+    width: 50%;
+    background-color: brown;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+#nom {
+    align-self: flex-end;
+    color: lightgrey;
+    padding-right: 3rem;
+}
+
+#image {
+    height: 30%;
+    width: 15%;
+    border-radius: 30%;
+    align-self: center;
+}

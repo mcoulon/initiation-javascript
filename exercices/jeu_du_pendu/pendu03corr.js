@@ -5,111 +5,147 @@ function game() {
     let mots_8 = ["accident", "acrobate", "adjectif", "adverbes", "aeroport", "africain", "aiguille", "allemand", "allonger", "alphabet", "amerique", "analogie", "anarchie", "anatomie", "appareil", "apporter", "aquarium", "araignee", "archipel", "arracher", "arrosoir", "assiette", "atheisme", "attacher", "attendre", "atterrir", "attraper", "bacterie", "bagarrer", "baguette", "balancer", "banlieue", "banquise", "barboter", "barrette", "baseball", "beaucoup", "biologie", "bonhomme", "bordeaux", "bouillir", "bourgeon", "boutique", "bracelet", "bretelle", "brouette", "camarade", "campagne", "caniveau", "caravane", "caresser", "cartable", "cassette", "ceinture", "chanteur", "chasseur", "chauffer", "chausser", "chausson", "cheminee", "chenille", "chercher", "cheville", "chimique", "chocolat", "chouette", "coiffeur", "colorier", "compagne", "comparer", "conduire", "connasse", "consoler", "consomme", "coquille", "couleurs", "couronne", "courrier", "crevasse", "crevette", "cueillir", "cuillere", "cuisiner", "cyclisme", "deborder", "decembre", "dechirer", "decoller", "decouper", "defendre", "deguiser", "dejeuner", "demander", "demarrer", "dentiste", "depasser", "depecher", "deranger", "derriere", "desobeir", "desordre", "dessinee", "dessiner", "detester", "detruire", "deuxieme", "dimanche", "discuter", "disputer", "distance", "divorcee", "douillet", "echanger", "echapper", "echasses", "eclairer", "ecologie", "ecorcher", "ecriture", "ecrivain", "ecureuil", "electron", "elephant", "eloigner", "emmerder", "empecher", "emporter", "enceinte", "endormir", "enfermer", "enfoncer", "ensemble", "entendre", "enterrer", "entourer", "eplucher", "equation", "escabeau", "escalade", "escalier", "escargot", "espagnol", "eteindre", "eternuer", "europeen", "explosif", "fascisme", "fauteuil", "fontaine", "football", "fouiller", "francais", "geologie", "gourmand", "habiller", "handball", "herisson", "histoire", "identite", "imaginer", "immeuble", "immobile", "incendie", "instable", "internet", "japonais", "jardiner", "journaux", "judaisme", "jugement", "jumelles", "kinshasa", "longueur", "lunettes", "machoire", "magazine", "magicien", "maladies", "mammouth", "mandarin", "marchand", "marecage", "medecine", "medicaux", "meilleur", "melanger", "mensonge", "mercredi", "milliard", "mineraux", "molecule", "monsieur", "montagne", "monument", "mouchoir", "mouiller", "muraille", "musicien", "natation", "nettoyer", "noisette", "novembre", "oceanien", "ordinaux", "oreiller", "orphelin", "pantalon", "panthere", "papillon", "parcours", "partager", "patauger", "peinture", "periodes", "personne", "petitami", "physique", "plaindre", "pleuvoir", "plombier", "pluvieux", "poitrine", "policier", "portiere", "position", "poubelle", "pourquoi", "preferer", "preparer", "promener", "proteger", "pullover", "pyramide", "quarante", "quartier", "quatorze", "question", "raconter", "ramasser", "rappeler", "raquette", "reaction", "realisme", "recevoir", "recoudre", "regarder", "religion", "remettre", "repasser", "repondre", "respirer", "retarder", "rondelle", "saladier", "sanskrit", "sciences", "septante", "soixante", "sonnette", "sorciere", "souffler", "souffrir", "soulever", "souvenir", "surprise", "synthese", "tabouret", "tagueule", "terminer", "terrible", "toboggan", "toilette", "tonnerre", "toujours", "tracteur", "traineau", "trembler", "triangle", "tricoter", "tricycle", "trottoir", "trounoir", "uniforme", "vacances", "variable", "vehicule", "vendredi", "vetement"];
     let mots_9 = ["abandonne", "accoucher", "accrocher", "allumette", "altruisme", "aluminium", "ambulance", "americain", "ascenseur", "asiatique", "asteroide", "astronome", "attention", "avalanche", "badminton", "biochimie", "botanique", "boucherie", "boulanger", "bousculer", "bouteille", "bricolage", "camescope", "cantonais", "cardinaux", "carrefour", "casquette", "casserole", "catalogue", "cauchemar", "changeant", "chataigne", "chaussure", "chirurgie", "chuchoter", "cigarette", "cimetiere", "cinquante", "cinquieme", "clignoter", "coloriage", "commencer", "compagnon", "concombre", "confiture", "continent", "continuer", "contraire", "coquetier", "corbeille", "couvercle", "crocodile", "dangereux", "decoupage", "degonfler", "delicieux", "demenager", "descendre", "dictature", "different", "difficile", "dimension", "dinosaure", "directeur", "doucement", "elastique", "embrasser", "entonnoir", "enveloppe", "epluchure", "equilibre", "escalader", "esclavage", "esperanto", "etiquette", "existence", "expliquer", "exterieur", "fabriquer", "feminisme", "fleuriste", "framboise", "geometrie", "grammaire", "grignoter", "guirlande", "handicape", "humanisme", "important", "infirmier", "installer", "interieur", "intestins", "inventeur", "jonquille", "kangourou", "maitresse", "maladroit", "mammifere", "maquiller", "marseille", "mecanique", "monarchie", "moustache", "moustique", "mouvement", "nucleaire", "orchestre", "paludisme", "pansement", "parapluie", "patissier", "perroquet", "personnes", "pharmacie", "plastique", "plongeoir", "politique", "portugais", "poussette", "poussiere", "princesse", "printemps", "promenade", "promettre", "propriete", "quatrieme", "questions", "radiateur", "remercier", "remplacer", "renverser", "retourner", "retrouver", "reveiller", "satellite", "sculpture", "septembre", "serviette", "shampoing", "souhaiter", "souligner", "spectacle", "squelette", "telephone", "telescope", "tournevis", "traverser", "troisieme", "trompette", "vaisselle", "xylophone", ""];
     let mots_10 = ["acoustique", "adolescent", "aspirateur", "astronomie", "athletisme", "automobile", "avortement", "backgammon", "balancoire", "barbouille", "bicyclette", "biographie", "bouddhisme", "brouillard", "calendrier", "champignon", "chaussette", "citrouille", "clementine", "coccinelle", "communisme", "comprendre", "conscience", "construire", "coquelicot", "coquillage", "couverture", "crocodiles", "cuisiniere", "definition", "democratie", "dentifrice", "difference", "diplomatie", "directrice", "distribuer", "dysenterie", "electrique", "enseignant", "esthetique", "fairechier", "filsdepute", "fourchette", "geographie", "grenouille", "hindouisme", "hirondelle", "impossible", "indonesien", "infirmiere", "inondation", "instrument", "inventions", "invitation", "magnetisme", "maintenant", "maquillage", "marguerite", "maternelle", "mecanicien", "medicament", "nourriture", "oligarchie", "ordinateur", "ordonnance", "pantheisme", "paquerette", "passerelle", "patisserie", "periodique", "peripherie", "petiteamie", "pharmacien", "phenomenes", "politicien", "poursuivre", "profession", "profondeur", "rapidement", "rechauffer", "recreation", "relativite", "rencontrer", "republique", "ressembler", "restaurant", "revolution", "rhinoceros", "semantique", "socialisme", "strasbourg", "surveiller", "syllogisme", "telephoner", "television", "trampoline", "tranquille", "transpirer", "travailler", "vietnamien", "voielactee"];
-    let choix;
+
     let mot = "";
     let tableauLettre = [];
     let score = 10;
     let lettreJoueur = "";
     let trouvé = false;
     let reponse = 0;
-    let cinq = document.querySelector('.premier');
-    let six = document.querySelector('.deuxieme');
-    let sept = document.querySelector('.troisieme');
-    let huit = document.querySelector('.quatrieme');
-    let neuf = document.querySelector('.cinquieme');
-    let dix = document.querySelector('.sixieme');
+    let level;
 
-    cinq.addEventListener('click', () => {
-        choix = mots_5
-        newGame();
-    });
-    six.addEventListener('click', () => {
-        choix = mots_6
-        newGame();
-    });
-    sept.addEventListener('click', () => {
-        choix = mots_7
-        newGame();
-    });
-    huit.addEventListener('click', () => {
-        choix = mots_8
-        newGame();
-    });
-    neuf.addEventListener('click', () => {
-        choix = mots_9
-        newGame();
-    });
-    dix.addEventListener('click', () => {
-        choix = mots_10
-        newGame();
-    });
+    function difficulté() {
+        do {
+            level = prompt(`Combien de lettres souhaitez-vous deviner?\n
+           1) 5 Lettres\n
+           2) 6 Lettres\n
+           3) 7 Lettres\n
+           4) 8 Lettres\n
+           5) 9 Lettres\n
+           6) 10 Lettres\n
+           Choisissez : ???`)
+        } while (level != '1' && level != '2' && level != '3' && level != '4' && level != '5' && level != '6');
 
+        switch (level) {
+            case '1':
+                console.log(`la difficulté est 5`)
+                newGame(5);
+                break;
+            case '2':
+                console.log(`la difficulté est 6`)
+                newGame(6);
+                break;
+            case '3':
+                console.log(`la difficulté est 7`)
+                newGame(7);
+                break;
+            case '4':
+                console.log(`la difficulté est 8`)
+                newGame(8);
+                break;
+            case '5':
+                console.log(`la difficulté est 9`)
+                newGame(9);
+                break;
+            case '6':
+                console.log(`la difficulté est 10`)
+                newGame(10);
+                break;
+            default:
+                alert(`Soucis`);
 
-    function newGame() {
-        let hasard = parseInt(Math.random() * (choix.length - 0) + 0);
-        mot = choix[hasard];
-        console.log(mot);
-        for (i = 0; i < mot.length; i++) {
-            tableauLettre[i] = "_";
         }
-        refresh();
+    }
+
+    function newGame(x) {
+
+        if (x == 5) {
+            let maximum = mots_5.length;
+            index = parseInt(Math.random() * (maximum - 0) + 0);
+            mot = mots_5[index];
+        } else if (x == 6) {
+            let maximum = mots_6.length;
+            index = parseInt(Math.random() * (maximum - 0) + 0);
+            mot = mots_6[index];
+        } else if (x == 7) {
+            let maximum = mots_7.length;
+            index = parseInt(Math.random() * (maximum - 0) + 0);
+            mot = mots_7[index];
+        } else if (x == 8) {
+            let maximum = mots_8.length;
+            index = parseInt(Math.random() * (maximum - 0) + 0);
+            mot = mots_8[index];
+        } else if (x == 9) {
+            let maximum = mots_9.length;
+            index = parseInt(Math.random() * (maximum - 0) + 0);
+            mot = mots_9[index];
+        } else if (x == 10) {
+            let maximum = mots_10.length;
+            index = parseInt(Math.random() * (maximum - 0) + 0);
+            mot = mots_10[index];
+        }
+
+        for (i = 0; i < mot.length; i++) {
+            tableauLettre[i] = "-";
+        }
         choisirLettre();
     }
 
-
     function choisirLettre() {
         do {
-            lettreJoueur = prompt(`le mot à trouver est ${tableauLettre.join(" ")}\nIl vous reste ${score} essais, \nChoisissez une lettre`);
+            lettreJoueur = prompt(`
+                le mot à trouver est ${tableauLettre.join(" ") }\n
+                Il vous reste ${score}
+                essais, \nChoisissez une lettre`);
         } while (lettreJoueur.length > 1 || lettreJoueur == "" || !isNaN(lettreJoueur));
-        refresh();
+
         vérifierLettre(lettreJoueur);
     }
 
     function vérifierLettre(x) {
 
-        for (i = 0; i <= mot.length; i++) {
+        for (i = 0; i < mot.length; i++) {
             if (mot[i] == x) {
                 trouvé = true;
                 tableauLettre[i] = x;
-                refresh();
-
             }
         }
 
         if (trouvé == false) {
             score--;
-            refresh();
         }
         checkTableau();
-    }
-
-    function refresh() {
-        let container = document.querySelector('.container');
-        while (container.firstChild) container.removeChild(container.firstChild);
-        container.innerHTML = `<p>${tableauLettre.join(" ")}</p>`;
     }
 
     function checkTableau() {
         trouvé = false;
         if (score == 0) {
-            alert(`Vous avez perdu, le mot à trouver était ${mot}`);
-            confirm(`Voulez-vous rejouer?`) ? game() : alert(`Au Revoir`);
+            alert(`
+                Vous avez perdu, le mot à trouver était $ { mot }
+                `);
+            confirm(`
+                Voulez - vous rejouer ? `) ? game() : alert(`
+                Au Revoir `);
         } else {
             reponse = 0;
             for (i = 0; i < tableauLettre.length; i++) {
-                if (tableauLettre[i] != '_') {
+                if (tableauLettre[i] != '-') {
                     reponse++;
                 }
             }
 
             if (reponse == mot.length) {
-                alert(`Bravo, vous avez gagné, le mot à trouver était bien ${mot}`);
-                confirm(`Voulez-vous rejouer?`) ? game() : alert(`Au Revoir`);
+                alert(`
+                Bravo, vous avez gagné, le mot à trouver était bien $ { mot }
+                `);
+                confirm(`
+                Voulez - vous rejouer ? `) ? game() : alert(`
+                Au Revoir `);
             } else {
                 choisirLettre();
             }
         }
     }
+    difficulté();
 }
-
 game();
